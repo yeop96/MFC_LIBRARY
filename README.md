@@ -48,7 +48,7 @@
 
 - 검색
 
-![image](https://user-images.githubusercontent.com/48886490/104954856-75f48a80-5a0c-11eb-8138-06ce16274d5a.png)
+![image](https://user-images.githubusercontent.com/48886490/104955040-daafe500-5a0c-11eb-9c8c-8ca247521650.png)
 
 - 대여 예외처리
 
