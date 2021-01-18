@@ -1,15 +1,13 @@
-CREATE DATABASE  IF NOT EXISTS `javadb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `javadb`;
--- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: javadb
 -- ------------------------------------------------------
--- Server version	8.0.22
+-- Server version	8.0.16
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+ SET NAMES utf8 ;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -23,13 +21,13 @@ USE `javadb`;
 
 DROP TABLE IF EXISTS `book`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `book` (
   `title` varchar(30) NOT NULL,
   `author` varchar(30) NOT NULL,
   `publisher` varchar(30) NOT NULL,
   `isbn` varchar(30) NOT NULL,
-  `quantity` int NOT NULL,
+  `quantity` int(11) NOT NULL,
   PRIMARY KEY (`isbn`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -45,40 +43,12 @@ INSERT INTO `book` VALUES ('심화프로그래밍설계','교수님','세종대�
 UNLOCK TABLES;
 
 --
--- Table structure for table `bookreturn`
---
-
-DROP TABLE IF EXISTS `bookreturn`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `bookreturn` (
-  `bookname` varchar(30) NOT NULL,
-  `bookauthor` varchar(30) NOT NULL,
-  `bookpublisher` varchar(30) NOT NULL,
-  `bookid` varchar(30) NOT NULL,
-  `bookRentday` date DEFAULT NULL,
-  `bookReturnday` date DEFAULT NULL,
-  PRIMARY KEY (`bookid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `bookreturn`
---
-
-LOCK TABLES `bookreturn` WRITE;
-/*!40000 ALTER TABLE `bookreturn` DISABLE KEYS */;
-INSERT INTO `bookreturn` VALUES ('어린왕자','sejong','1','is1','2011-01-06','2011-01-24');
-/*!40000 ALTER TABLE `bookreturn` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `rental`
 --
 
 DROP TABLE IF EXISTS `rental`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `rental` (
   `user_id` varchar(30) NOT NULL,
   `title` varchar(30) NOT NULL,
@@ -105,14 +75,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `user` (
   `id` varchar(30) NOT NULL,
   `pw` varchar(30) NOT NULL,
   `name` varchar(30) NOT NULL,
   `tel` varchar(30) NOT NULL,
-  `book` int NOT NULL,
-  `overdue` int NOT NULL,
+  `book` int(11) NOT NULL,
+  `overdue` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -136,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-17 16:26:28
+-- Dump completed on 2021-01-19  1:25:45

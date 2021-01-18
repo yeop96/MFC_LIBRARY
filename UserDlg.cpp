@@ -59,6 +59,7 @@ BOOL UserDlg::OnInitDialog()
 	CRect rect;
 	m_Tab.GetWindowRect(&rect);
 
+
 	pUserRentalDlg = new UserRentalDlg;
 	pUserRentalDlg->Create(IDD_USER_RENTAL, &m_Tab);
 	pUserRentalDlg->MoveWindow(0, 20, rect.Width(), rect.Height() - 20);

@@ -235,6 +235,7 @@
     <None Include="res\BookManagement.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\BACK2.bmp" />
     <Image Include="res\BACKGROUND.bmp" />
     <Image Include="res\book.ico" />
   </ItemGroup>
